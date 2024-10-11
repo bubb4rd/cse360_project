@@ -1,0 +1,24 @@
+.root {
+    -fx-font-family: 'Arial';
+}
+
+.button {
+    -fx-background-color: #800000;
+    -fx-text-fill: white;
+}
+
+.button:hover {
+    -fx-background-color: #a00000;
+}
+
+.label {
+    -fx-padding: 5px;
+}
+
+.table-view {
+    -fx-border-color: lightgray;
+}
+
+.table-column {
+    -fx-alignment: CENTER_LEFT;
+}
