@@ -1,4 +1,4 @@
-package com.example.cse360_phase2;
+package com.example.cse360_project1;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -14,7 +14,7 @@ public class UserConnection extends JDBCConnection {
             ArrayList<Book> books = new ArrayList<>();
             JDBCConnection connection = new JDBCConnection();
             ResultSet result = connection.fetchQuery(
-                    "SELECT * FROM user.users u JOIN user.book_collections bc ON u.id = bc.user_id JOIN user.books b ON bc.collection_id = b.collection_id WHERE u.id =" + user_id + ";"
+                    "SELECT * FROM user_schema.users u JOIN user_schema.book_collections bc ON u.id = bc.user_id JOIN user_schema.books b ON bc.collection_id = b.collection_id WHERE u.id =" + user_id + ";"
             );
             while (result.next()) {
                 int id = result.getInt("book_id");

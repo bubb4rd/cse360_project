@@ -1,4 +1,4 @@
-package com.example.cse360_phase2;
+package com.example.cse360_project1;
 
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -53,13 +53,15 @@ public class UserInfo {
             orderHistoryLayout.getChildren().add(bookOrder);
         }
         Button dashboardButton = new Button("Dashboard");
+        SellerDashboard sellerDashboard = new SellerDashboard(user, sceneController);
+//        Scene dashboardScene = sellerDashboard.getScene();
 //
 //        dashboardButton.setOnAction(e -> sceneController.switchScene(dashboardScene));
         main.getChildren().addAll(layout, orderHistoryLayout, dashboardButton);
         Scene scene = new Scene(main, mainScene.getWidth(), mainScene.getHeight());
 
         // Load and apply the CSS file
-        String css = getClass().getResource("/com/example/cse360_phase2/css/UserInfo.css").toExternalForm();
+        String css = getClass().getResource("/com/example/cse360_project1/css/UserInfo.css").toExternalForm();
         scene.getStylesheets().add(css);
 
         return scene;

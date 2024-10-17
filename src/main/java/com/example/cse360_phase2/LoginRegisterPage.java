@@ -1,4 +1,4 @@
-package com.example.cse360_phase2;
+package com.example.cse360_project1;
 
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -99,18 +99,18 @@ public class LoginRegisterPage {
                 accountTypeError.displayError(root, mainScene);
             }
 
-            else if (confirmPassword.isEmpty()) {
+            else if (confirmPassword.isEmpty() || confirmPassword != password) {
                 Error registerError = new Error("Registration failed: Confirm password not matching");
                 registerError.displayError(root, mainScene);
             }
 
             if (password.equals(confirmPassword)) {
                 JDBCConnection connection = new JDBCConnection();
-                ResultSet results = connection.registerUser(userID, password);
+                ResultSet results = connection.registerUser(userID, password, accountType);
             }
         });
         Scene loginRegisterScene = new Scene(root, mainScene.getWidth(), mainScene.getHeight());
-        String css = getClass().getResource("/com/example/cse360_phase2/css/LoginRegister.css").toExternalForm();
+        String css = getClass().getResource("/com/example/cse360_project1/css/LoginRegister.css").toExternalForm();
         loginRegisterScene.getStylesheets().add(css);
         return loginRegisterScene;
     }

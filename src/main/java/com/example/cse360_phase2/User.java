@@ -1,5 +1,4 @@
-package com.example.cse360_phase2;
-
+package com.example.cse360_project1;
 
 import javafx.scene.Scene;
 
@@ -91,5 +90,9 @@ public class User {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+    @Override
+    public String toString() {
+        return id + " | " + name + " " + userType;
     }
 }
