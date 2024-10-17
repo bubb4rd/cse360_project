@@ -1,8 +1,8 @@
-package com.example.cse360_project1;
+package com.example.cse360_phase2;
 
-import com.example.cse360_project1.Book;
-import com.example.cse360_project1.SceneController;
-import com.example.cse360_project1.User;
+import com.example.cse360_phase2.Book;
+import com.example.cse360_phase2.SceneController;
+import com.example.cse360_phase2.User;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.geometry.Insets;

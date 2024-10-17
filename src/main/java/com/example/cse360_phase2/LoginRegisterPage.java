@@ -1,4 +1,4 @@
-package com.example.cse360_project1;
+package com.example.cse360_phase2;
 
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
