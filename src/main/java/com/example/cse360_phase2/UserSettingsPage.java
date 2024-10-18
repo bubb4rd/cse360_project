@@ -50,7 +50,7 @@ public class UserSettingsPage {
     }
     public VBox sidePanel(User user) {
         VBox sidePanel = new VBox();
-        Image BookBetterCard = new Image("C:\\Users\\theba\\IdeaProjects\\CSE360_PROJECT1\\src\\main\\resources\\com\\example\\cse360_project1\\images\\BookBetterCard.png", 155.0, 30.0, true, true);
+        Image BookBetterCard = new Image(getClass().getResource("/com/example/cse360_phase2/images/BookBetterCard.png").toExternalForm(), 155.0, 30.0, true, true);
         ImageView bookBetterImageView = new ImageView(BookBetterCard);
         bookBetterImageView.setFitWidth(155.0);
         bookBetterImageView.setFitHeight(30.0);
@@ -100,8 +100,8 @@ public class UserSettingsPage {
         userArea.setAlignment(Pos.BOTTOM_CENTER);
 
         sidePanel.getChildren().addAll(bookBetterImageView, generalArea, supportArea, userArea);
-        String css = getClass().getResource("/com/example/cse360_project1/css/UserSettings.css").toExternalForm();
-        sidePanel.getStylesheets().add(css);
+//        String css = getClass().getResource("/com/example/cse360_phase2/css/UserSettings.css").toExternalForm();
+//        sidePanel.getStylesheets().add(css);
         return sidePanel;
     }
 
@@ -159,7 +159,7 @@ public class UserSettingsPage {
 
         actionBlurb.getChildren().addAll(actionBlurbLabel, changePasswordLabel, changePasswordButton, deleteAccountLabel, deleteAccountButton);
         pane.getChildren().addAll(accountSettingsLabel, personalBlurb, actionBlurb);
-        String css = getClass().getResource("/com/example/cse360_project1/css/UserSettings.css").toExternalForm();
+//        String css = getClass().getResource("/com/example/cse360_project1/css/UserSettings.css").toExternalForm();
         AnchorPane.setTopAnchor(personalBlurb, 110.0);
         AnchorPane.setTopAnchor(accountSettingsLabel, 30.0);
         AnchorPane.setTopAnchor(actionBlurb, 405.0);
@@ -167,7 +167,7 @@ public class UserSettingsPage {
         AnchorPane.setLeftAnchor(actionBlurb, 50.0);
         AnchorPane.setLeftAnchor(accountSettingsLabel, 50.0);
         AnchorPane.setLeftAnchor(personalBlurb, 50.0);
-        pane.getStylesheets().add(css);
+//        pane.getStylesheets().add(css);
         return pane;
     }
 }

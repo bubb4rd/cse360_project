@@ -18,8 +18,10 @@ public class DevelopmentMode extends Application {
         sceneController.setCurrentScene(mainScene);
         JDBCConnection connection = new JDBCConnection();
         User user = connection.logInReturnUser("username", "password");
+
         UserSettingsPage userSettingsPage = new UserSettingsPage(user, sceneController);
-        primaryStage.setScene(userSettingsPage.getScene());
+        Scene userSettingsScene = userSettingsPage.getScene();
+        primaryStage.setScene(userSettingsScene);
         primaryStage.show();
 
 

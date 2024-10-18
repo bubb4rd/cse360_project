@@ -65,7 +65,7 @@ public class JDBCConnection {
     }
     public User logInReturnUser(String username, String password) {
         try {
-            this.connection =  DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/user_schema", "root", "!!mqsqlhubbard2024");
+            this.connection =  DriverManager.getConnection("jdbc:mysql://bookbetter-aws.czoua2woyqte.us-east-2.rds.amazonaws.com:3306/user", "admin", "!!mqsqlhubbard2024");
             Statement statement = connection.createStatement();
             this.result = statement.executeQuery("SELECT * FROM users WHERE username = '" + username + "'");
 
